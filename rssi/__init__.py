@@ -225,6 +225,8 @@ class RSSI_Scan(object):
             #     }
             # ]    
     def formatCells(self, raw_cell_string):
+        if type.raw_cell_string == bytes:
+            raw_cell_string = raw_cell_string.decode('utf-8')
         raw_cells = raw_cell_string.split('Cell') # Divide raw string into raw cells.
         raw_cells.pop(0) # Remove unneccesary "Scan Completed" message.
         if(len(raw_cells) > 0): # Continue execution, if atleast one network is detected.

@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="rssi",
+    name="j_rssi",
     version="1.0.2",
     author="Juan Antonio Villlagomez",
     author_email="email@juan-antonio.me",
